@@ -1,0 +1,15 @@
+run :
+python -m venv .venv
+.venv\Scripts\activate
+
+pip install flask_jwt_extended
+pip install flask_sqlalchemy
+pip install flask-migrate
+pip install pymysql
+pip install python-dotenv
+
+flask run
+
+Ubah direktori di BukuView dan AdminView
+
+app.config['UPLOAD_FOLDER'] = 'C:/Users/ikhwa/Desktop/flask3/app/static/uploads'

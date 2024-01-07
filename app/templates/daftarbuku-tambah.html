@@ -1,0 +1,64 @@
+{% extends 'template.html' %} {% block content%}
+<div class="row">
+    <div class="col-12 col-md-6 col-lg-6">
+        <div class="card">
+            <form class="needs-validation" novalidate="" method="POST" enctype="multipart/form-data">
+                <div class="card-header">
+                    <h4>{{subjudul}}</h4>
+                </div>
+                <div class="card-body">
+                    <div class="form-group">
+
+                        <label>Judul Buku</label>
+                        <input type="text" class="form-control" required="" id='judulbuku' name='judulbuku'>
+                        <div class="invalid-feedback">
+                            <p>Contoh Attack On Titan</p>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label>Pengarang</label>
+                        <input type="text" class="form-control" required="" id="pengarang" name="pengarang">
+                        <div class="invalid-feedback">
+                            <p>Contoh Mashashi Kishimoto</p>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label>Penerbit</label>
+                        <input type="text" class="form-control" required="" id="penerbit" name="penerbit">
+                        <div class="invalid-feedback">
+                            <p>Contoh Alex Media Computindo</p>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label>Tahun Terbit</label>
+                        <input type="text" class="form-control" required="" id="tahunterbit" name="tahunterbit">
+                        <div class="invalid-feedback">
+                            <p>Contoh 2021</p>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label>Kategori</label>
+                        <select class="form-control" name="kategori" id="kategori">
+                          <option  value="Fiksi" >Fiksi</option>
+                          <option value="Ilmiah">Ilmiah</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label>File Foto</label>
+                        <input type="file" class="form-control" name="pdf">
+
+                    </div>
+
+                    <div class="card-footer text-right">
+                        <button class="btn btn-primary">Submit</button>
+                    </div>
+            </form>
+            </div>
+        </div>
+    </div>
+    <div class="col-12 col-md-6 col-lg-6">
+        <img src="{{url_for('static', filename='img/miyu-03.jpg')}}" alt="" height="600 px" width="450 px">
+    </div>
+</div>
+
+</div> {% endblock %}
