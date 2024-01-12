@@ -6,7 +6,7 @@ import os
 import flask
 
 ALLOWED_EXTENSION = set(['png', 'jpeg', 'jpg','pdf'])
-app.config['UPLOAD_FOLDER'] = 'C:/Users/ikhwa/Desktop/flask/app/static/uploads'
+app.config['UPLOAD_FOLDER'] = 'C:/Users/ASUS/Desktop/flask/flask_ta/app/static/uploads'
 
 def allowed_file(filename):
     return '.' in filename and filename.rsplit('.', 1)[1].lower() in ALLOWED_EXTENSION
